@@ -2,27 +2,184 @@
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>درباره توسعه‌دهنده - Eversun EA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره توسعه‌دهنده - سیستم معاملاتی Eversun</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Urbanist:wght@600;700&display=swap');
+        
+        :root {
+            --bg-main: #020617;
+            --bg-card: #0f172a;
+            --accent: #10b981;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border: #334155;
+        }
+
         body {
-            background-color: #020617;
-            color: #f8fafc;
+            background-color: var(--bg-main);
+            color: var(--text-main);
             font-family: 'Vazirmatn', sans-serif;
             line-height: 1.8;
-            padding: 40px 20px;
+            padding: 0;
+            margin: 0;
         }
-        .container { max-width: 800px; margin: 0 auto; background: #0f172a; padding: 40px; border-radius: 16px; border: 1px solid #334155; }
-        h1 { color: #10b981; border-bottom: 2px solid #334155; padding-bottom: 10px; }
-        .back-btn { display: inline-block; margin-top: 20px; color: #10b981; text-decoration: none; font-weight: bold; }
+
+        .container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .profile-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1e293b 100%);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        }
+
+        h1 {
+            color: var(--accent);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 16px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 15px;
+        }
+
+        h2 {
+            color: var(--text-main);
+            font-size: 22px;
+            margin-top: 40px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        p {
+            color: #cbd5e1;
+            font-size: 16px;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .highlight-box {
+            background-color: rgba(16, 185, 129, 0.05);
+            border-right: 4px solid var(--accent);
+            padding: 20px;
+            border-radius: 4px 12px 12px 4px;
+            margin: 25px 0;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .stat-card {
+            background: rgba(2, 6, 23, 0.4);
+            border: 1px solid var(--border);
+            padding: 20px;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 28px;
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+        .stat-desc {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-top: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-top: 40px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.2s;
+        }
+
+        .back-btn:hover {
+            transform: translateX(-5px);
+        }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1>درباره توسعه‌دهنده و رزومه</h1>
-        <p>سرمایه‌گذاران دوست دارند بدانند سرمایه خود را به چه کسی می‌سپارند. در این بخش سوابق خود را بنویسید:</p>
-        <p>من [نام شما] با بیش از [تعداد] سال سابقه در بازارهای مالی و برنامه‌نویسی MQL، این سیستم را با هدف کاهش خطای انسانی و کسب سود مستمر طراحی کرده‌ام...</p>
-        <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی</a>
+        <div class="profile-card">
+            <h1>توسعه‌دهنده سیستم معاملاتی Eversun</h1>
+            <div class="subtitle">تلفیق انضباط مالی بانکی، ریاضیات پیشرفته و هوش الگوریتمی</div>
+
+            <p>
+                رمز موفقیت در بازارهای مالی، هیجان یا حدس و گمان نیست؛ بلکه پایبندی به اصول سخت‌گیرانه مدیریت ریسک و ریاضیات کاربردی است. من به عنوان یک متخصص ۴۵ ساله، مسیر حرفه‌ای خود را در عالی‌ترین سطوح انضباط مالی کشور سپری کرده‌ام و سال‌هاست که به عنوان <strong>معاونت مالی در یکی از بزرگ‌ترین بانک‌های کشور</strong> فعالیت دارم. مدیریت دارایی، سنجش ریسک‌های کلان و ساختارهای سرمایه، نه تنها شغل من، بلکه تخصص علمی و تجربی من است.
+            </p>
+
+            <div class="highlight-box">
+                <strong>چرا تفکر بانکی در معاملات الگوریتمی اهمیت دارد؟</strong><br>
+                یک بانک هرگز بر اساس شانس سرمایه‌گذاری نمی‌کند. در سیستم بانکی، بقای سرمایه و کنترل ریسک اولویت اول است. من همین تفکر صلب و قانون‌مند را وارد دنیای معاملات الگوریتمی کرده‌ام.
+            </div>
+
+            <h2>🛠️ مسیر توسعه و پیشینه فنی در MQL</h2>
+            <p>
+                از سال ۲۰۱۹، با تکیه بر دانش مالی خود، وارد دنیای برنامه‌نویسی تخصصی بازارهای مالی (MQL4/MQL5) شدم. طی این سال‌ها، به دور از هیاهوهای رسانه‌ای، تمرکز خود را بر روی تحقیق و توسعه (R&D) معطوف کردم. در این مسیر، <strong>صدها نسخه مختلف از سیستم‌های معاملاتی</strong> را با استراتژی‌های ابداعی و متمایز طراحی، آزمایش و بهینه‌سازی کرده‌ام. 
+            </p>
+            <p>
+                هر شکست در آزمون‌های گذشته، برای من یک داده‌ی علمیِ ارزشمند بود. با فیلتر کردن مداوم خطاها و اصلاح رفتارهای سیستم در مواجهه با اخبار و نوسانات شدید، به الگوهای رفتاری ویژه‌ای دست یافتم که سیستم فعلی را به بلوغ کامل رسانده است.
+            </p>
+
+            <h2>📐 منطق ریاضی؛ ستون فقرات سیستم Eversun</h2>
+            <p>
+                بازار هدف این الگوریتم، پیچیده‌ترین و پرنوسان‌ترین نماد جهانی یعنی <strong>طلا (XAUUSD)</strong> است. برای غلبه بر نوسانات ناگهانی طلا، سیستم ما از هیچ‌کدام از روش‌های سنتی یا خطرناک (مانند مارتینگل یا گریدهای بی‌هدف) استفاده نمی‌کند. مبنای اصلی این سیستم بر پایه مفاهیم عمیق ریاضیات و آمار استوار است:
+            </p>
+            <p>
+                ما با محاسبه دقیق <strong>انحراف از معیار (Standard Deviation)</strong>، <strong>واریانس قیمت</strong> و فرآیندهای پیشرفته بهینه‌سازی، نقاط برگشتی بازار را با بالاترین احتمال ممکن شناسایی می‌کنیم. این سیستم حتی در تایم‌فریم حساس ۱ دقیقه (M1)، به دلیل فیلترهای آماری شدید، پوزیشن‌ها را در امن‌ترین پیوت‌های قیمتی باز و بسته می‌کند.
+            </p>
+
+            <h2>🛡️ دستاورد بزرگ: مهار مطلق دروداون (Drawdown)</h2>
+            <p>
+                بزرگ‌ترین افتخار این سیستم، بازدهی آن نیست؛ بلکه ایمنی بی‌نظیر آن است. ما توانسته‌ایم سرکش‌ترین نماد بازار (طلا) را طوری مهار کنیم که دروداون سیستم همواره <strong>کمتر از ۵٪</strong> باقی بماند. این یعنی حفاظت حداکثری از حقوق سرمایه‌گذار.
+            </p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">45</div>
+                    <div class="stat-desc">سن توسعه‌دهنده (پختگی در تصمیم‌گیری)</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">2019</div>
+                    <div class="stat-desc">شروع توسعه تخصصی MQL</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">&lt; 5%</div>
+                    <div class="stat-desc">حداکثر دروداون (Max Drawdown)</div>
+                </div>
+            </div>
+
+            <p>
+                اگر به دنبال یک شبه پولدار شدن یا ریسک‌های هیجانی هستید، این سیستم مناسب شما نیست. اما اگر به دنبال یک سرمایه‌گذاری علمی، منطقی و مبتنی بر آمار با پشتوانه مدیریت ریسک بانکی هستید، سیستم کپی‌تریدینگ ما با شفافیت کامل در خدمت شماست. تمام دیتای معاملاتی ما به صورت زنده قابل رهگیری است، چرا که ریاضیات نیازی به پنهان‌کاری ندارد.
+            </p>
+
+            <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی سایت</a>
+        </div>
     </div>
+
 </body>
 </html>
