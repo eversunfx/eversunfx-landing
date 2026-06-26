@@ -1,319 +1,201 @@
-<!-- منوی بالای صفحه -->
-<nav style="text-align: center; padding: 20px; background: #0f172a; border-bottom: 1px solid #334155;">
-    <a href="index.html" style="color: #f8fafc; text-decoration: none; margin: 0 15px; font-weight: bold;">صفحه اصلی</a> |
-    <a href="strategy.html" style="color: #94a3b8; text-decoration: none; margin: 0 15px;">استراتژی اکسپرت</a> |
-    <a href="about.html" style="color: #94a3b8; text-decoration: none; margin: 0 15px;">درباره من (رزومه)</a>
-</nav>
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eversun EA - سیستم معاملات الگوریتمی طلا</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700&family=Urbanist:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Urbanist:wght@600;700&display=swap');
         
         :root {
             --bg-main: #020617;
             --bg-card: #0f172a;
-            --bg-card-hover: #1e293b;
             --accent: #10b981;
+            --accent-hover: #059669;
             --text-main: #f8fafc;
             --text-muted: #94a3b8;
             --border: #334155;
         }
 
-        .wf-ea-wrapper {
+        body {
             background-color: var(--bg-main);
             color: var(--text-main);
             font-family: 'Vazirmatn', sans-serif;
-            padding: 0;
             margin: 0;
+            padding: 0;
             line-height: 1.6;
         }
 
-        .wf-container {
-            max-width: 1200px;
+        .container {
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 80px 20px;
+            padding: 40px 20px;
         }
 
-        /* Hero Section */
-        .wf-hero {
+        header {
             text-align: center;
-            padding: 120px 20px;
-            background: radial-gradient(circle at top, rgba(16, 185, 129, 0.1) 0%, transparent 60%);
-        }
-        .wf-hero h1 {
-            font-size: 48px;
-            font-weight: 700;
-            color: var(--text-main);
-            margin-bottom: 20px;
-        }
-        .wf-hero p {
-            font-size: 20px;
-            color: var(--text-muted);
-            max-width: 700px;
-            margin: 0 auto 40px;
+            margin-bottom: 50px;
         }
 
-        /* Buttons */
-        .wf-btn {
-            display: inline-block;
-            background-color: var(--accent);
-            color: #fff;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-size: 18px;
+        .logo {
+            font-family: 'Urbanist', sans-serif;
+            font-size: 42px;
             font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.2);
-        }
-        .wf-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 15px 25px rgba(16, 185, 129, 0.3);
-        }
-
-        /* Grid / Features */
-        .wf-grid-3 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
-        }
-        .wf-card {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px 30px;
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-        .wf-card:hover {
-            background-color: var(--bg-card-hover);
-            transform: translateY(-5px);
-            border-color: var(--accent);
-        }
-        .wf-card-icon {
-            font-size: 40px;
             color: var(--accent);
-            margin-bottom: 20px;
+            letter-spacing: 2px;
+            margin: 0;
         }
-        .wf-card h3 {
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        .wf-card p {
+
+        .tagline {
             color: var(--text-muted);
             font-size: 16px;
+            margin-top: 5px;
         }
 
-        /* Stats Section */
-        .wf-stats {
-            background-color: var(--bg-card);
-            border-radius: 20px;
-            padding: 60px 20px;
-            display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
-            gap: 40px;
-            margin: 60px 0;
-            border: 1px solid var(--border);
-        }
-        .wf-stat-item { text-align: center; }
-        .wf-stat-num {
-            font-family: 'Urbanist', sans-serif;
-            font-size: 64px;
-            font-weight: 700;
-            color: var(--accent);
-            line-height: 1;
-        }
-        .wf-stat-label {
-            font-size: 18px;
-            color: var(--text-muted);
-            margin-top: 10px;
-        }
-
-        /* Steps Timeline */
-        .wf-timeline {
+        .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: 1fr;
             gap: 30px;
-            margin-top: 50px;
-        }
-        .wf-step {
-            text-align: center;
-            position: relative;
-        }
-        .wf-step-num {
-            width: 50px;
-            height: 50px;
-            background-color: var(--accent);
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 20px;
-            font-weight: 700;
-            margin: 0 auto 20px;
         }
 
-        /* Pricing Table */
-        .wf-table-wrapper {
-            overflow-x: auto;
-            margin-top: 50px;
-            border-radius: 16px;
+        .card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, #1e293b 100%);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 35px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--text-main);
+            margin-top: 0;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        p {
+            color: #cbd5e1;
+            font-size: 15px;
+            text-align: justify;
+            margin-bottom: 25px;
+        }
+
+        /* استایل اختصاصی برای ویجت مای‌اف‌ایکس‌بوک */
+        .myfxbook-container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.95); /* پس‌زمینه روشن برای هماهنگی با ویجت سفید شما */
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            box-shadow: inset 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .myfxbook-container img {
+            max-width: 100%;
+            height: auto;
+            display: inline-block;
+            transition: transform 0.2s;
+        }
+
+        .myfxbook-container img:hover {
+            transform: scale(1.01);
+        }
+
+        .btn-group {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .btn {
+            flex: 1;
+            min-width: 200px;
+            padding: 14px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            text-align: center;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background-color: var(--accent);
+            color: #020617;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--accent-hover);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-main);
             border: 1px solid var(--border);
         }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            background-color: var(--bg-card);
-            text-align: right;
-        }
-        th, td {
-            padding: 20px;
-            border-bottom: 1px solid var(--border);
-        }
-        th {
-            background-color: var(--bg-card-hover);
-            color: var(--accent);
-            font-size: 18px;
+
+        .btn-secondary:hover {
+            background-color: rgba(255,255,255,0.05);
+            border-color: var(--text-muted);
         }
 
-        .wf-section-title {
+        footer {
             text-align: center;
-            font-size: 36px;
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-        .wf-section-desc {
-            text-align: center;
+            margin-top: 60px;
             color: var(--text-muted);
-            margin-bottom: 50px;
+            font-size: 13px;
         }
     </style>
 </head>
-<body class="wf-ea-wrapper">
+<body>
 
-    <section class="wf-hero">
-        <div class="wf-container">
-            <h1>سیستم معاملاتی خودکار Eversun</h1>
-            <p>اتصال هوشمند به اکسپرت پیشرفته طلا (XAUUSD) در بروکر لایت‌فایننس. بازدهی مستمر همراه با مدیریت ریسک و کنترل سخت‌گیرانه دروداون.</p>
-            <a href="#" class="wf-btn">شروع کپی تریدینگ در LiteFinance</a>
-        </div>
-    </section>
+    <div class="container">
+        
+        <header>
+            <h1 class="logo">EVERSUN</h1>
+            <div class="tagline">Mathematical Algorithmic Trading System for XAUUSD</div>
+        </header>
 
-    <section class="wf-container">
-        <h2 class="wf-section-title">چرا سیستم معاملاتی ما؟</h2>
-        <p class="wf-section-desc">ویژگی‌های فنی و مزیت‌های رقابتی اکسپرت اختصاصی</p>
-        <div class="wf-grid-3">
-            <div class="wf-card">
-                <div class="wf-card-icon">🤖</div>
-                <h3>الگوریتم هوشمند</h3>
-                <p>تحلیل دقیق روند طلا بر اساس اندیکاتورهای بهینه‌سازی شده در تایم‌فریم‌های مختلف به صورت ۲۴ ساعته.</p>
-            </div>
-            <div class="wf-card">
-                <div class="wf-card-icon">🛡️</div>
-                <h3>مدیریت ریسک پیشرفته</h3>
-                <p>محاسبه دقیق حجم ورود بر اساس مدیریت سرمایه و استفاده از حد ضرر (Stop Loss) برای تمامی پوزیشن‌ها.</p>
-            </div>
-            <div class="wf-card">
-                <div class="wf-card-icon">⚡</div>
-                <h3>سرعت اجرای بالا</h3>
-                <p>مستقر بر روی VPSهای اختصاصی و پرسرعت جهت به حداقل رساندن اسلیپیج در سرور لایت‌فایننس.</p>
-            </div>
-        </div>
-    </section>
+        <div class="grid">
+            <div class="card">
+                <h2>📊 کارنامه زنده و تایید شده سیستم (Live Track Record)</h2>
+                <p>
+                    پایداری، کنترل دروداون و مدیریت ریسک صلب، ارکان اصلی سیستم الگوریتمی Eversun هستند. نمودار زیر مستقیماً از سرورهای مستقل <strong>Myfxbook</strong> لود می‌شود و عملکرد واقعی، شفاف و بدون تغییرات دست‌ساز این سیستم را بر روی نماد طلا نشان می‌دهد.
+                </p>
 
-    <section class="wf-container">
-        <h2 class="wf-section-title">عملکرد و آمار زنده</h2>
-        <p class="wf-section-desc">شفافیت کامل در ارائه کارنامه معاملاتی</p>
-        <div class="wf-stats">
-            <div class="wf-stat-item">
-                <div class="wf-stat-num">+۱۵٪</div>
-                <div class="wf-stat-label">میانگین سود ماهانه</div>
-            </div>
-            <div class="wf-stat-item">
-                <div class="wf-stat-num">۸٪</div>
-                <div class="wf-stat-label">حداکثر دروداون (Max DD)</div>
-            </div>
-            <div class="wf-stat-item">
-                <div class="wf-stat-num">۷۲٪</div>
-                <div class="wf-stat-label">نرخ پیروزی (Win Rate)</div>
+                <!-- پیاده‌سازی دقیق کد ویجت شما -->
+                <div class="myfxbook-container">
+                    <a href="https://www.myfxbook.com/statements/11715312/statement.html" target="_blank" rel="noopener noreferrer">
+                        <img alt="Eversun Myfxbook Widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=11715312&type=1&color=white"/>
+                    </a>
+                </div>
+
+                <p style="font-size: 13px; color: var(--text-muted); margin-top: 10px; text-align: center;">
+                    * جهت مشاهده جزئیات پیشرفته‌تر، ارزیابی دروداون و فاکتور سودآوری (Profit Factor) روی نمودار کلیک کنید.
+                </p>
+
+                <div class="btn-group">
+                    <!-- لینک دانلود نسخه دمو (فایل ex4 شما که در گیت‌هاب آپلود کرده‌اید) -->
+                    <a href="Eversun_EA_Demo.ex4" class="btn btn-primary" download>📥 دانلود رایگان نسخه دمو (حساب دمو)</a>
+                    <!-- لینک به صفحه معرفی نامه و رزومه شما -->
+                    <a href="about.html" class="btn btn-secondary">🔍 درباره توسعه‌دهنده و منطق آمار سیستم</a>
+                </div>
             </div>
         </div>
-        <p style="text-align: center; color: var(--text-muted);">جهت بررسی و تایید سوابق، می‌توانید آمار ما را در <a href="#" style="color: var(--accent); text-decoration: none; font-weight: bold;">Myfxbook</a> مشاهده کنید.</p>
-    </section>
 
-    <section class="wf-container">
-        <h2 class="wf-section-title">مراحل ساده اتصال و سرمایه‌گذاری</h2>
-        <p class="wf-section-desc">سرمایه شما در حساب شخصی خودتان باقی می‌ماند و ما دسترسی به برداشت نداریم.</p>
-        <div class="wf-timeline">
-            <div class="wf-step">
-                <div class="wf-step-num">۱</div>
-                <h3>ثبت نام</h3>
-                <p>افتتاح حساب در بروکر لایت‌فایننس</p>
-            </div>
-            <div class="wf-step">
-                <div class="wf-step-num">۲</div>
-                <h3>شارژ حساب</h3>
-                <p>واریز حداقل موجودی لازم جهت کپی</p>
-            </div>
-            <div class="wf-step">
-                <div class="wf-step-num">۳</div>
-                <h3>انتخاب اکانت</h3>
-                <p>جستجوی نام سیستم ما در لیست کپی‌ترید</p>
-            </div>
-            <div class="wf-step">
-                <div class="wf-step-num">۴</div>
-                <h3>شروع خودکار</h3>
-                <p>تنظیم ضریب و کپی همزمان پوزیشن‌ها</p>
-            </div>
-        </div>
-    </section>
+        <footer>
+            <p style="text-align: center; font-size: 12px; color: var(--text-muted);">
+                &copy; 2026 Eversun Trading Systems. All Rights Reserved. <br>
+                معاملات مارکت فارکس حاوی ریسک است. عملکرد گذشته ضامن نتایج آینده نیست.
+            </p>
+        </footer>
 
-    <section class="wf-container">
-        <h2 class="wf-section-title">شرایط و پلن‌های سرمایه‌گذاری</h2>
-        <p class="wf-section-desc">تسهیم سود عادلانه متناسب با میزان سرمایه شما</p>
-        <div class="wf-table-wrapper">
-            <table>
-                <thead>
-                    <tr>
-                        <th>ویژگی</th>
-                        <th>حساب استاندارد</th>
-                        <th>حساب VIP</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>حداقل موجودی</td>
-                        <td>۵۰۰ دلار</td>
-                        <td>۵,۰۰۰ دلار</td>
-                    </tr>
-                    <tr>
-                        <td>تسهیم سود (Performance Fee)</td>
-                        <td>۳۰٪</td>
-                        <td>۲۰٪</td>
-                    </tr>
-                    <tr>
-                        <td>پشتیبانی و مشاوره</td>
-                        <td>کانال عمومی</td>
-                        <td>خط اختصاصی VIP</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <section class="wf-hero" style="background: radial-gradient(circle at bottom, rgba(16, 185, 129, 0.1) 0%, transparent 60%);">
-        <div class="wf-container">
-            <h2>آماده‌اید معاملات خود را به هوش مصنوعی بسپارید؟</h2>
-            <p>به کانال تلگرام ما بپیوندید تا گزارش‌های روزانه سود و زیان را دریافت کنید.</p>
-            <a href="#" class="wf-btn" style="margin-bottom: 20px;">ورود به کانال تلگرام گزارش‌ها</a>
-            <div style="color: var(--text-muted); font-size: 14px;">نام کاربری کانال: @Eversun_EA</div>
-        </div>
-    </section>
+    </div>
 
 </body>
 </html>
