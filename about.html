@@ -1,67 +1,67 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>درباره توسعه‌دهنده - سیستم معاملاتی Eversun</title>
+    <title>About the Developer | Eversun Quantitative Systems</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Urbanist:wght@600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Urbanist:wght@600;700;800&display=swap');
         
         :root {
-            --bg-main: #020617;
-            --bg-card: #0f172a;
-            --accent: #10b981;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --border: #334155;
+            --bg-dark: #030712;
+            --bg-card: #0b1329;
+            --accent-green: #10b981;
+            --accent-gold: #f59e0b;
+            --text-light: #f3f4f6;
+            --text-muted: #9ca3af;
+            --border-color: #1f2937;
         }
 
         body {
-            background-color: var(--bg-main);
-            color: var(--text-main);
-            font-family: 'Vazirmatn', sans-serif;
-            line-height: 1.8;
-            padding: 0;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            font-family: 'Space Grotesk', sans-serif;
             margin: 0;
+            padding: 0;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 0 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
         }
 
-        .profile-card {
-            background: linear-gradient(135deg, var(--bg-card) 0%, #1e293b 100%);
-            border: 1px solid var(--border);
-            border-radius: 24px;
-            padding: 50px 40px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-green);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 40px;
+            transition: transform 0.2s;
+        }
+
+        .back-link:hover {
+            transform: translateX(-5px);
         }
 
         h1 {
-            color: var(--accent);
-            font-size: 32px;
-            font-weight: 700;
-            margin-bottom: 5px;
-        }
-
-        .subtitle {
-            color: var(--text-muted);
-            font-size: 16px;
-            margin-bottom: 30px;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 15px;
+            font-family: 'Urbanist', sans-serif;
+            font-size: 40px;
+            font-weight: 800;
+            margin: 0 0 10px 0;
+            letter-spacing: -1px;
         }
 
         h2 {
-            color: var(--text-main);
+            font-family: 'Urbanist', sans-serif;
             font-size: 22px;
+            color: var(--accent-gold);
             margin-top: 40px;
             margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
 
         p {
@@ -72,113 +72,74 @@
         }
 
         .highlight-box {
-            background-color: rgba(16, 185, 129, 0.05);
-            border-right: 4px solid var(--accent);
-            padding: 20px;
-            border-radius: 4px 12px 12px 4px;
-            margin: 25px 0;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+            background: linear-gradient(135deg, var(--bg-card) 0%, #161f38 100%);
+            border-left: 4px solid var(--accent-green);
+            padding: 25px;
+            border-radius: 0 12px 12px 0;
             margin: 30px 0;
         }
 
-        .stat-card {
-            background: rgba(2, 6, 23, 0.4);
-            border: 1px solid var(--border);
-            padding: 20px;
-            border-radius: 12px;
+        .highlight-box p {
+            margin: 0;
+            font-style: italic;
+            color: var(--text-light);
+        }
+
+        footer {
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+            padding-top: 30px;
             text-align: center;
-        }
-
-        .stat-value {
-            font-family: 'Urbanist', sans-serif;
-            font-size: 28px;
-            color: var(--accent);
-            font-weight: 700;
-        }
-
-        .stat-desc {
-            font-size: 14px;
+            font-size: 13px;
             color: var(--text-muted);
-            margin-top: 5px;
-        }
-
-        .back-btn {
-            display: inline-block;
-            margin-top: 40px;
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 700;
-            transition: all 0.2s;
-        }
-
-        .back-btn:hover {
-            transform: translateX(-5px);
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <div class="profile-card">
-            <h1>توسعه‌دهنده سیستم معاملاتی Eversun</h1>
-            <div class="subtitle">تلفیق انضباط مالی بانکی، ریاضیات پیشرفته و هوش الگوریتمی</div>
+        
+        <a href="index.html" class="back-link">← Back to Live Performance</a>
 
+        <h1>Behind the Algorithm</h1>
+        <p style="font-size: 18px; color: var(--text-muted); margin-bottom: 40px;">
+            Meet the developer combining institutional banking discipline with quantitative mathematics.
+        </p>
+
+        <h2>The Developer's Background</h2>
+        <p>
+            With over 17 years of professional experience within formal state banking and financial organizations, my entire career has been anchored in risk evaluation, systemic asset protection, and structural discipline. In the banking sector, risk is not a variable you gamble with—it is a parameter you strictly confine.
+        </p>
+        <p>
+            This exact institutional framework led me to algorithmic development. I realized that the retail trading world is heavily saturated with emotional biases, lagging technical indicators, and dangerous recovery strategies (like Martingale or unhedged grids) that inevitably lead to capital liquidation. 
+        </p>
+
+        <div class="highlight-box">
             <p>
-                رمز موفقیت در بازارهای مالی، هیجان یا حدس و گمان نیست؛ بلکه پایبندی به اصول سخت‌گیرانه مدیریت ریسک و ریاضیات کاربردی است. من به عنوان یک متخصص ۴۵ ساله، مسیر حرفه‌ای خود را در عالی‌ترین سطوح انضباط مالی کشور سپری کرده‌ام و سال‌هاست که به عنوان <strong>معاونت مالی در یکی از بزرگ‌ترین بانک‌های کشور</strong> فعالیت دارم. مدیریت دارایی، سنجش ریسک‌های کلان و ساختارهای سرمایه، نه تنها شغل من، بلکه تخصص علمی و تجربی من است.
+                "My mission was simple: To bridge the gap between institutional risk discipline and retail spot gold (XAUUSD) trading using pure statistical mathematics."
             </p>
-
-            <div class="highlight-box">
-                <strong>چرا تفکر بانکی در معاملات الگوریتمی اهمیت دارد؟</strong><br>
-                یک بانک هرگز بر اساس شانس سرمایه‌گذاری نمی‌کند. در سیستم بانکی، بقای سرمایه و کنترل ریسک اولویت اول است. من همین تفکر صلب و قانون‌مند را وارد دنیای معاملات الگوریتمی کرده‌ام.
-            </div>
-
-            <h2>🛠️ مسیر توسعه و پیشینه فنی در MQL</h2>
-            <p>
-                از سال ۲۰۱۹، با تکیه بر دانش مالی خود، وارد دنیای برنامه‌نویسی تخصصی بازارهای مالی (MQL4/MQL5) شدم. طی این سال‌ها، به دور از هیاهوهای رسانه‌ای، تمرکز خود را بر روی تحقیق و توسعه (R&D) معطوف کردم. در این مسیر، <strong>صدها نسخه مختلف از سیستم‌های معاملاتی</strong> را با استراتژی‌های ابداعی و متمایز طراحی، آزمایش و بهینه‌سازی کرده‌ام. 
-            </p>
-            <p>
-                هر شکست در آزمون‌های گذشته، برای من یک داده‌ی علمیِ ارزشمند بود. با فیلتر کردن مداوم خطاها و اصلاح رفتارهای سیستم در مواجهه با اخبار و نوسانات شدید، به الگوهای رفتاری ویژه‌ای دست یافتم که سیستم فعلی را به بلوغ کامل رسانده است.
-            </p>
-
-            <h2>📐 منطق ریاضی؛ ستون فقرات سیستم Eversun</h2>
-            <p>
-                بازار هدف این الگوریتم، پیچیده‌ترین و پرنوسان‌ترین نماد جهانی یعنی <strong>طلا (XAUUSD)</strong> است. برای غلبه بر نوسانات ناگهانی طلا، سیستم ما از هیچ‌کدام از روش‌های سنتی یا خطرناک (مانند مارتینگل یا گریدهای بی‌هدف) استفاده نمی‌کند. مبنای اصلی این سیستم بر پایه مفاهیم عمیق ریاضیات و آمار استوار است:
-            </p>
-            <p>
-                ما با محاسبه دقیق <strong>انحراف از معیار (Standard Deviation)</strong>، <strong>واریانس قیمت</strong> و فرآیندهای پیشرفته بهینه‌سازی، نقاط برگشتی بازار را با بالاترین احتمال ممکن شناسایی می‌کنیم. این سیستم حتی در تایم‌فریم حساس ۱ دقیقه (M1)، به دلیل فیلترهای آماری شدید، پوزیشن‌ها را در امن‌ترین پیوت‌های قیمتی باز و بسته می‌کند.
-            </p>
-
-            <h2>🛡️ دستاورد بزرگ: مهار مطلق دروداون (Drawdown)</h2>
-            <p>
-                بزرگ‌ترین افتخار این سیستم، بازدهی آن نیست؛ بلکه ایمنی بی‌نظیر آن است. ما توانسته‌ایم سرکش‌ترین نماد بازار (طلا) را طوری مهار کنیم که دروداون سیستم همواره <strong>کمتر از ۵٪</strong> باقی بماند. این یعنی حفاظت حداکثری از حقوق سرمایه‌گذار.
-            </p>
-
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-value">45</div>
-                    <div class="stat-desc">سن توسعه‌دهنده (پختگی در تصمیم‌گیری)</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">2019</div>
-                    <div class="stat-desc">شروع توسعه تخصصی MQL</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-value">&lt; 5%</div>
-                    <div class="stat-desc">حداکثر دروداون (Max Drawdown)</div>
-                </div>
-            </div>
-
-            <p>
-                اگر به دنبال یک شبه پولدار شدن یا ریسک‌های هیجانی هستید، این سیستم مناسب شما نیست. اما اگر به دنبال یک سرمایه‌گذاری علمی، منطقی و مبتنی بر آمار با پشتوانه مدیریت ریسک بانکی هستید، سیستم کپی‌تریدینگ ما با شفافیت کامل در خدمت شماست. تمام دیتای معاملاتی ما به صورت زنده قابل رهگیری است، چرا که ریاضیات نیازی به پنهان‌کاری ندارد.
-            </p>
-
-            <a href="index.html" class="back-btn">← بازگشت به صفحه اصلی سایت</a>
         </div>
+
+        <h2>The Evolution of Eversun</h2>
+        <p>
+            I began engineering custom scripts and market indicators using the MQL architecture back in 2019, choosing to focus exclusively on Gold due to its high volatility and liquidity characteristics. Eversun was not built in a single week or month. It is the result of continuous execution auditing, stress-testing across diverse market cycles, and cold mathematical optimization.
+        </p>
+        <p>
+            The current build, <strong>Eversun v12.0</strong>, represents the twelfth generation of structural refinement. Every single update over the years was deployed to achieve one critical objective: eliminating operational noise on lower timeframes (M1/M5) while keeping the absolute floating drawdown locked strictly below the 5% threshold.
+        </p>
+
+        <h2>Why Keep It Limited to 20 Licenses?</h2>
+        <p>
+            I am a firm believer that high-frequency mathematical anomalies in the market remain profitable only when they are under the radar. Mass-distributing a highly specialized algorithm overcrowding the liquidity pool can lead to execution slippage and reduced efficiency at broker prime-brokers levels. 
+        </p>
+        <p>
+            By offering exactly 20 lifetime licenses, I am ensuring two things: providing an elite, institutional-grade tool to a closed circle of disciplined systematic traders, and perfectly preserving the structural execution integrity of the algorithm on global servers.
+        </p>
+
+        <footer>
+            <p>&copy; 2026 Eversun Trading Systems. Built for quantitative accuracy.</p>
+        </footer>
+
     </div>
 
 </body>
